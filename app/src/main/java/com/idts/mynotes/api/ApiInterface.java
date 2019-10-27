@@ -34,4 +34,9 @@ public interface ApiInterface {
             @Field("note") String note,
             @Field("color") int color
     );
+
+    @FormUrlEncoded
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @POST("delete.php")
+    Call<Note> deleteNote( @Field("id") int id );
 }
